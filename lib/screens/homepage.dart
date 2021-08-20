@@ -9,17 +9,15 @@ class _homePageState extends State<homePage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        body: Center(
-          child: Stack(
-            children: <Widget>[
-              Container(
-                alignment: Alignment.center,
-                child: Image.asset(
-                  ('images/imagebg1.jpg'),
-                  fit: BoxFit.fill,
-                ),
-              ),
+      child: Scaffold(appBar: AppBar( shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(
+          bottom: Radius.circular(40),
+        ),
+      ),
+        backgroundColor: Colors.blueGrey,
+        toolbarHeight: 50,
+      ),
+        body:
               Container(
                   alignment: Alignment.center,
                   child: Text(
@@ -29,10 +27,8 @@ class _homePageState extends State<homePage> {
                         fontWeight: FontWeight.bold,
                         fontSize: 22.0),
                   )),
-            ],
+
           ),
-        ),
-      ),
     );
   }
 }
